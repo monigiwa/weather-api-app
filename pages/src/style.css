@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+}
+#container {
+  border: 2px solid black;
+}
+form {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}
+.temperature {
+  font-size: 25px;
+  font-weight: bold;
+}
+.fahrenheit,
+.celcius {
+  font-weight: bold;
+  font-size: 17px;
+}
