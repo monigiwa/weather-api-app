@@ -13,46 +13,57 @@
     <link rel="stylesheet" type="text/css" href="/pages/src/style.css" />
   </head>
   <body>
-    <div class="container mt-3 text-dark rounded" id="container">
-      <div class="p-3 mb-2 con-body">
-        <h1 class="mt-2">⛅ Weather App</h1>
+    <div class="container mt-3 text-dark rounded">
+      <h1 class="mt-2">⛅ Weather App</h1>
+      <div id="weather-app">
         <form id="search-input-form">
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              class="form-control"
-              id="city-input"
-              placeholder="Name of the City..."
-              aria-label="Name of the City..."
-              aria-describedby="button-addon2"
-            />
-            <button class="btn btn-primary" type="button" id="button-addon2">
-              Search 🔍
-            </button>
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                name="cityInput"
+                id="city-input"
+                placeholder="Type a city..."
+                autocomplete="off"
+                autofocus="on"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm w-60"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                type="button"
+                class="form-control btn btn-success w-50"
+                id="current-location-btn"
+              >
+                Current
+              </button>
+            </div>
           </div>
         </form>
-      </div>
-      <div class="container weather-city-degree mb-3">
-        <div class="weather-city col">
-          <h3 class="lh-1" id="current-city">Lagos, Nigeria</h3>
-          <p class="lh-1" id="current-date-time">Saturday, 6:05 PM</p>
-          <p class="lh-1">Partly sunny</p>
-        </div>
-        <div class="container row">
-          <div id="degree-celfar" class="col float-left">
-            <span class="temperature" id="temperature">⛅ 30</span
-            ><span class="units">
-              <a href="#" class="celcius" id="celcius-link"><sup>°C | </sup></a>
-
-              <a href="#" class="fahrenheit" id="fahrenheit-link"
-                ><sup>°F</sup></a
-              >
-            </span>
+        <div class="weather-city-degree mt-4 mb-3">
+          <div class="weather-city col">
+            <h3 class="lh-1" id="current-city">Lagos, Nigeria</h3>
+            <p class="lh-1" id="current-date-time">Saturday, 6:05 PM</p>
+            <p class="lh-1">Partly sunny</p>
           </div>
-          <div class="weather-degree col">
-            <p class="lh-1">Precipitation: 9%</p>
-            <p class="lh-1">Wind: 11 KMPH</p>
-            <p class="lh-1">Humidity: 83%</p>
+          <div class="row">
+            <div id="degree-celfar" class="col-5 float-left">
+              <span class="temperature" id="temperature">⛅ 30</span
+              ><span class="units">
+                <a href="#" class="celcius" id="celcius-link"><sup>°C</sup></a>
+              </span>
+            </div>
+            <div class="weather-degree col">
+              <p class="lh-1">Humidity: 83%</p>
+              <p class="lh-1">Wind: 11 KMPH</p>
+            </div>
           </div>
         </div>
       </div>
