@@ -24,6 +24,9 @@ button {
 a {
   text-decoration: none;
 }
+.header {
+  text-align: center;
+}
 .temperature {
   font-size: 25px;
   font-weight: bold;
