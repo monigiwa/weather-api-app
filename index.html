@@ -14,55 +14,59 @@
   </head>
   <body>
     <div class="container mt-3 text-dark rounded">
-      <h1 class="mt-2 header">⛅ Weather App</h1>
-      <div id="weather-app">
-        <form id="search-input-form">
-          <div class="row">
-            <div class="col-6">
-              <input
-                type="search"
-                name="cityInput"
-                id="city-input"
-                placeholder="Type a city..."
-                autocomplete="off"
-                autofocus="on"
-                class="form-control shadow-sm"
-              />
+      <div class="weather-app-wrapper">
+        <h1 class="mt-2">⛅ Weather App</h1>
+        <div class="weather-app">
+          <form id="search-input-form">
+            <div class="row">
+              <div class="col-6">
+                <input
+                  type="search"
+                  name="cityInput"
+                  id="city-input"
+                  placeholder="Type a city..."
+                  autocomplete="off"
+                  autofocus="on"
+                  class="form-control shadow-sm"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="form-control btn btn-primary shadow-sm w-100"
+                />
+              </div>
+              <div class="col-3">
+                <button
+                  type="button"
+                  class="form-control btn btn-success shadow-sm w-100"
+                  id="current-location-btn"
+                >
+                  Current
+                </button>
+              </div>
             </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Search"
-                class="form-control btn btn-primary shadow-sm w-100"
-              />
+          </form>
+          <div class="weather-city-degree mt-4 mb-3">
+            <div class="weather-city col">
+              <h3 class="lh-1" id="current-city">Lagos, Nigeria</h3>
+              <p class="lh-1" id="current-date-time">Saturday, 6:05 PM</p>
+              <p class="lh-1">Partly sunny</p>
             </div>
-            <div class="col-3">
-              <button
-                type="button"
-                class="form-control btn btn-success shadow-sm w-100"
-                id="current-location-btn"
-              >
-                Current
-              </button>
-            </div>
-          </div>
-        </form>
-        <div class="weather-city-degree mt-4 mb-3">
-          <div class="weather-city col">
-            <h3 class="lh-1" id="current-city">Lagos, Nigeria</h3>
-            <p class="lh-1" id="current-date-time">Saturday, 6:05 PM</p>
-            <p class="lh-1">Partly sunny</p>
-          </div>
-          <div class="row">
-            <div id="degree-celfar" class="col-5 float-left">
-              <span class="temperature" id="temperature">⛅ 30</span
-              ><span class="units">
-                <a href="#" class="celcius" id="celcius-link"><sup>°C</sup></a>
-              </span>
-            </div>
-            <div class="weather-degree col">
-              <p class="lh-1">Humidity: 83%</p>
-              <p class="lh-1">Wind: 11 KMPH</p>
+            <div class="row">
+              <div id="degree-celfar" class="col-5 float-left">
+                <span class="temperature" id="temperature">⛅ 30</span
+                ><span class="units">
+                  <a href="#" class="celcius" id="celcius-link"
+                    ><sup>°C</sup></a
+                  >
+                </span>
+              </div>
+              <div class="weather-degree col">
+                <p class="lh-1">Humidity: 83%</p>
+                <p class="lh-1">Wind: 11 KMPH</p>
+              </div>
             </div>
           </div>
         </div>

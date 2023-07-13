@@ -1,13 +1,6 @@
 body {
   font-family: Arial, sans-serif;
 }
-#weather-app {
-  max-width: 600px;
-  border: 2px solid rgb(170, 170, 170);
-  border-radius: 10px;
-  padding: 2rem;
-  margin: 0 auto;
-}
 form {
   margin-top: 20px;
 }
@@ -24,8 +17,14 @@ button {
 a {
   text-decoration: none;
 }
-.header {
-  text-align: center;
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.weather-app {
+  border: 2px solid rgb(170, 170, 170);
+  border-radius: 10px;
+  padding: 2rem;
 }
 .temperature {
   font-size: 25px;
