@@ -10,6 +10,7 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/pages/src/style.css" />
   </head>
   <body>
@@ -52,11 +53,11 @@
             <div class="weather-city col">
               <h3 class="lh-1" id="current-city">Lagos, Nigeria</h3>
               <p class="lh-1" id="current-date-time">Saturday, 6:05 PM</p>
-              <p class="lh-1">Partly sunny</p>
+              <p class="lh-1" id="description">Partly sunny</p>
             </div>
             <div class="row">
               <div id="degree-celfar" class="col-5 float-left">
-                <span class="temperature" id="temperature">⛅ 30</span
+                <span class="temperature" id="temperature">30</span
                 ><span class="units">
                   <a href="#" class="celcius" id="celcius-link"
                     ><sup>°C</sup></a
@@ -64,8 +65,8 @@
                 </span>
               </div>
               <div class="weather-degree col">
-                <p class="lh-1">Humidity: 83%</p>
-                <p class="lh-1">Wind: 11 KMPH</p>
+                <p class="lh-1" id="humidity">Humidity: 83%</p>
+                <p class="lh-1" id="wind">Wind: 11 KMPH</p>
               </div>
             </div>
           </div>

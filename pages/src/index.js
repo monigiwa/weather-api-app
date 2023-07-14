@@ -21,14 +21,26 @@ function displayCurrentDateAndTime() {
   let currentDateAndTime = document.querySelector("#current-date-time");
   currentDateAndTime.innerHTML = `${day} ${hours}:${minutes}`;
 }
+
 displayCurrentDateAndTime();
-/*Challenge 2*/
+function showTemperature(response) {
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  console.log(response.data);
+}
 
 function showCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city-input").value;
   let currentCity = document.querySelector("#current-city");
-  currentCity.innerHTML = `${cityInput}, Nigeria`;
+  currentCity.innerHTML = `${cityInput}`;
+
+  let apiKey = `14e466d9db948177786a4330301cfa0e`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
 }
+
 let submitForm = document.querySelector("#search-input-form");
 submitForm.addEventListener("submit", showCity);

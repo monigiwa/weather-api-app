@@ -34,3 +34,6 @@ a {
   font-weight: bold;
   font-size: 17px;
 }
+.weather-city #description::first-letter {
+  text-transform: capitalize;
+}
