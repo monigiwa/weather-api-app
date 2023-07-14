@@ -31,7 +31,7 @@ function showTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#wind");
-  // windElement.innerHTML = response.data.
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   console.log(response.data);
 }
 
